@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "creditbias"
+    }
+  },
+  "defaultProject": "creditbias",
+  "cli": {
+    "analytics": "de256b3a-b246-4b9b-a6a5-b7cab5913eae"
+  }
 }
