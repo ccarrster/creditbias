@@ -1,6 +1,37 @@
+<div class="card lenders">
 <h2>Lenders</h2>
-<ul class="lenders">
-    <li *ngFor="let lender of lenders">
-        <span class="lender">{{lender.id}}</span> {{lender.name}} Bias {{lender.bias}}
-    </li>
-</ul>
+
+    <div *ngFor="let lender of lenders">
+        <div style="border: 1px solid black;">
+            <a title="Racial Bias {{lender.bias}}" href="{{lender.url}}" target="_blank">
+                <div>
+                    <h3>{{lender.name}}</h3>
+                </div>
+                <div>
+                    <img  *ngIf="lender.bias < 0.5" src="../assets/starempty.png">
+                    <img  *ngIf="lender.bias >= 0.5 && lender.bias < 1" src="../assets/starhalf.png">
+                    <img  *ngIf="lender.bias >= 1" src="../assets/starfull.png">
+
+                    <img  *ngIf="lender.bias < 1.5" src="../assets/starempty.png">
+                    <img  *ngIf="lender.bias >= 1.5 && lender.bias < 2" src="../assets/starhalf.png">
+                    <img  *ngIf="lender.bias >= 2" src="../assets/starfull.png">
+
+                    <img  *ngIf="lender.bias < 2.5" src="../assets/starempty.png">
+                    <img  *ngIf="lender.bias >= 2.5 && lender.bias < 3" src="../assets/starhalf.png">
+                    <img  *ngIf="lender.bias >= 3" src="../assets/starfull.png">
+
+                    <img  *ngIf="lender.bias < 3.5" src="../assets/starempty.png">
+                    <img  *ngIf="lender.bias >= 3.5 && lender.bias < 4" src="../assets/starhalf.png">
+                    <img  *ngIf="lender.bias >= 4" src="../assets/starfull.png">
+
+                    <img  *ngIf="lender.bias < 4.5" src="../assets/starempty.png">
+                    <img  *ngIf="lender.bias >= 4.5 && lender.bias < 5" src="../assets/starhalf.png">
+                    <img  *ngIf="lender.bias >= 5" src="../assets/starfull.png">
+                    <span style="font-size: 50px;">{{lender.bias}}</span>
+                </div>
+                <div>
+                    <img src="../assets/{{lender.id}}.png" style="max-height: 100px;">
+                </div>
+            </a>
+    </div>
+</div>

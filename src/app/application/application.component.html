@@ -1,27 +1,59 @@
-<div>
-    <div>
-        <label>Loan Amount:
-          <input [(ngModel)]="application.amount" placeholder="Loan Amount"/>
-        </label>
-    </div>
-    <div>
-        <label>Loan Term:
-          <input [(ngModel)]="application.term" placeholder="Loan Term"/>
-        </label>
-    </div>
-    <div>
-        <label>Loan Interest:
-          <input [(ngModel)]="application.interest" placeholder="Loan Interest"/>
-        </label>
-    </div>
-    <div>
-        <mat-form-field appearance="fill">
-            <mat-label>Lender</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let lender of lenders" [value]="lender.id">
-                {{lender.name}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-    </div>
+<div class="card">
+        <div>
+            <label>Loan Amount</label>
+        </div>
+        <div>
+            <input [(ngModel)]="application.amount" placeholder="Loan Amount"/>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Repayment Term</mat-label>
+                <mat-select [(ngModel)]="application.term">
+                <mat-option *ngFor="let term of terms" [value]="term.id">
+                    {{term.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <label>Income</label>
+        </div>
+        <div>
+            <input [(ngModel)]="application.income" placeholder="Annual Income"/>
+        </div>
+        <div>
+            <label>Loan Interest</label>
+        </div>
+        <div>
+            <input [(ngModel)]="application.interest" placeholder="Loan Interest"/>
+        </div>
+        <div>
+            <mat-checkbox>Loan Approved</mat-checkbox>
+        </div>
+        <div>
+            <mat-checkbox>Loan Accepted</mat-checkbox>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Lender</mat-label>
+                <mat-select [(ngModel)]="application.lender">
+                <mat-option *ngFor="let lender of lenders" [value]="lender.id">
+                    {{lender.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="fill">
+                <mat-label>Ethnicity</mat-label>
+                <mat-select [(ngModel)]="application.ethnicity">
+                <mat-option *ngFor="let ethnicity of ethnicities" [value]="ethnicity.id">
+                    {{ethnicity.name}}
+                </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div>
+            <input type="submit" (click)="clear();">
+        </div>
 </div>

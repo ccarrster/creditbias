@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Application } from '../application.model';
 import { LENDERS } from '../mock-lenders';
+import { ETHNICITIES } from '../mock-ethnicity';
+import { TERMS } from '../mock-terms';
 
 
 @Component({
@@ -11,11 +13,18 @@ import { LENDERS } from '../mock-lenders';
 export class ApplicationComponent implements OnInit {
 
   lenders = LENDERS;
-  application = new Application(1, '1', 1);
+  ethnicities = ETHNICITIES;
+  terms = TERMS;
+  application = new Application(5000, 2, 9.5, 70000, false, false, 1, 1);
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clear(){
+    this.application = new Application(0, 1, 0, 0, false, false, 1, 1);
+    alert('Thank you for your submission.');
   }
 
 }

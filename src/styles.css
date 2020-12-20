@@ -2,3 +2,29 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.card{
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #888888;
+    box-shadow: 5px 10px #888888;
+    width: 300px;
+    float: left;
+    background-color: #eeeeee;
+}
+
+.lenders {
+    width: 800px;
+}
+
+.card div{
+    padding: 5px;
+    margin: 5px;
+}
+
+.how{
+    padding: 20px;
+    margin: 20px;
+    background-color: #eeeeee;
+    border: 1px solid #888888;
+    box-shadow: 5px 10px #888888;
+}
